@@ -1,21 +1,20 @@
 'use client'
 import React from 'react'
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import Link from "next/link"
 import {
 CalendarDays,
 Clock,
-Fingerprint,
-  LineChart,
-  Megaphone,
-  MenuIcon,
-  Settings,
-  Users2,
+LineChart,
+Megaphone,
+MenuIcon,
+Settings,
+Users2,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import useResponsiveSheet from '@/src/hooks/useResponsiveSheet'
 import { Separator } from '@/components/ui/separator'
 import LinkItem from './LinkItem'
+import ProfileAvatar from '../Avatar/ProfileAvatar'
 
 const MobileSheet = () => {
     const { isOpen, setIsOpen } = useResponsiveSheet();
@@ -29,15 +28,20 @@ const MobileSheet = () => {
         </SheetTrigger>
         <SheetContent side="left" className="sm:max-w-xs">
             <nav className="grid gap-6 text-lg font-medium mt-4">
-            <Link
-                href="/"
-                className="flex h-10 w-full items-center justify-center gap-2 rounded-md bg-[#4a7dff] text-lg font-semibold text-white hover:text-foreground md:text-base"
-            >
-                <div className='flex items-center gap-4 transition-all group-hover:scale-110'>
-                <Fingerprint className="h-5 w-5 " />
-                <span className="text-sm tracking-widest">TimeMap</span>
+                <div
+                    className="flex h-14 w-full items-center justify-start p-4 rounded-lg bg-[#4a7dff] dark:bg-[#4a7dff]/90 font-semibold text-white md:text-base"
+                >
+                    <div className='flex items-center gap-2 transition-all group-hover:scale-110'>
+                    <ProfileAvatar 
+                    imgUrl='https://res.cloudinary.com/duwr4xret/image/upload/v1723471521/zsdz6exj1xxlqgvh3jhe.png'
+                    name='James Kodak'
+                    />
+                    <div className='flex flex-col items-start justify-center'>
+                        <span className="text-sm tracking-widest">James Kodak</span>
+                        <p className='text-xs font-light text-[#f2f3f7] '>ID: 1001</p>
+                    </div>
+                    </div>
                 </div>
-            </Link>
             <Separator 
             orientation='horizontal'
             className='w-full -mt-2 text-muted-foreground'/>

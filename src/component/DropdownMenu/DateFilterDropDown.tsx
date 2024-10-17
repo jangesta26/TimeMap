@@ -18,7 +18,7 @@ const DateFilterDropDown: React.FC<DateFilterDropDownProps> = ({ selectedFilter,
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline" size="sm" className="h-6 py-0 gap-1 focus-visible:ring-0 focus-visible:ring-offset-0">
+        <Button variant="outline" size="sm" className="gap-1 focus-visible:ring-0 focus-visible:ring-offset-0">
           <span className="sr-only sm:not-sr-only sm:whitespace-nowrap">Filter</span>
           <ListFilter className="h-3.5 w-3.5 " />
         </Button>

@@ -19,15 +19,15 @@ const ProfileDropdownMenu = () => {
             <Button
             variant="outline"
             size="icon"
-            className="overflow-hidden rounded-full"
+            className="overflow-hidden rounded-full focus-visible:ring-[#4a7dff] "
             >
-            <ProfileAvatar/>
+            <ProfileAvatar imgUrl='https://res.cloudinary.com/duwr4xret/image/upload/v1723471521/zsdz6exj1xxlqgvh3jhe.png' name='James Kodak'/>
             </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent align="end" className='w-72 mt-2'>
+        <DropdownMenuContent align="start" className='w-72 mt-2'>
             <DropdownMenuLabel className='flex items-center gap-2 font-light'>
-                <ProfileAvatar/>
-                <Label>Shad CN</Label>
+            <ProfileAvatar imgUrl='https://res.cloudinary.com/duwr4xret/image/upload/v1723471521/zsdz6exj1xxlqgvh3jhe.png' name='James Kodak'/>
+                <Label>James Kodak</Label>
             </DropdownMenuLabel>
             <DropdownMenuSeparator />
             <DropdownMenuItem className='flex items-center gap-2'>

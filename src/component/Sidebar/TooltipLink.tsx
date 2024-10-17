@@ -22,9 +22,9 @@ const pathname = usePathname();
         <TooltipTrigger asChild>
           <Link
             href={href}
-            className={`flex h-10 w-10 items-center justify-center rounded-lg transition-colors ${isActive ? 'bg-[#4a7dff] text-white' : 'bg-[#f2f3f7] text-muted-foreground hover:text-foreground'}`}
+            className={`flex h-10 w-10 items-center justify-center rounded-lg transition-colors ${isActive ? 'bg-[#4a7dff] text-white' : 'bg-[#f2f3f7] dark:bg-[#4a7dff]/10 text-muted-foreground hover:text-foreground'}`}
           >
-            <Icon className={`h-5 w-5 ${isActive ? 'text-white' : 'text-muted-foreground'}`} />
+            <Icon className={`h-5 w-5 ${isActive ? 'text-white' : 'text-muted-foreground '}`} />
             <span className="sr-only">{label}</span>
           </Link>
         </TooltipTrigger>

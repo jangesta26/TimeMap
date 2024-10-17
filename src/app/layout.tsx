@@ -1,7 +1,7 @@
-import { ThemeProvider } from "../context/ThemeProvider";
 import "@/src/styles/globals.css";
 import Head from "./head";
 import { poppins } from "@/lib/font";
+import { ThemeProviders } from "../context/ThemeProvider";
 
 
 export default function RootLayout({
@@ -18,14 +18,9 @@ export default function RootLayout({
       <body
         className={`${poppins.variable} antialiased`}
       >
-        <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            {children}
-        </ThemeProvider>
+        <ThemeProviders>
+          {children}
+        </ThemeProviders>
       </body>
     </html>
   );

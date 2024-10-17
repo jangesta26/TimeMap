@@ -1,5 +1,5 @@
 import React from 'react'
-import { ChevronDown} from "lucide-react"
+import { ChevronDown, Plus, PlusCircle} from "lucide-react"
 import { Button } from "@/components/ui/button"
 import {
   DropdownMenu,
@@ -14,14 +14,15 @@ const MyRequest = () => {
     <DropdownMenu>
         <DropdownMenuTrigger asChild>
             <Button
-            variant="ghost"
-            className="flex items-center justify-center w-full h-12 font-semibold focus-visible:ring-0 focus-visible:ring-offset-0 rounded-none gap-2"
+            variant="outline"
+            size="sm"
+            className="rounded-md flex items-center justify-center focus-visible:ring-0 focus-visible:ring-offset-0"
             >
-            My Rquest
-            <ChevronDown className='h-4'/>
+            <span className="sr-only sm:not-sr-only sm:whitespace-nowrap">My Request</span>
+            <PlusCircle className='h-4'/>
             </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent align="end" className='w-72 p-4 mt-1'>
+        <DropdownMenuContent align="end" className='w-72 p-4'>
             <DropdownMenuItem className='text-md font-light'>
                 My Leaves
             </DropdownMenuItem>

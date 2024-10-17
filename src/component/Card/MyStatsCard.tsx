@@ -2,7 +2,6 @@ import React from 'react'
 import {
     Card,
     CardContent,
-    CardDescription,
     CardFooter,
     CardHeader,
     CardTitle,
@@ -13,7 +12,7 @@ import { Separator } from '@/components/ui/separator'
 
 const MyStatsCard = () => {
   return (
-    <Card className='shadow-lg rounded-xl w-full mx-auto'>
+    <Card className='shadow-lg rounded-xl w-full mx-auto bg-card/90'>
       <div className='mx-auto flex flex-col p-2'>
         {/* Top Row */}
         <div className='flex flex-col sm:flex-row sm:divide-x-[1px] divide-y-[1px] sm:divide-y-0'>
@@ -29,7 +28,7 @@ const MyStatsCard = () => {
                 </div>
               </CardContent>
             </div>
-            <div className='flex items-center justify-center h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-[#f2f3f7]'>
+            <div className='flex items-center justify-center h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-[#f2f3f7] dark:bg-[#4a7dff]/10'>
               <CornerRightDown className='h-8 sm:h-10 text-[#4a7dff]'/>
             </div>
           </div>
@@ -45,7 +44,7 @@ const MyStatsCard = () => {
                 </div>
               </CardContent>
             </div>
-            <div className='flex items-center justify-center h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-[#f2f3f7]'>
+            <div className='flex items-center justify-center h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-[#f2f3f7] dark:bg-[#4a7dff]/10'>
               <Coffee className='h-8 sm:h-10 text-[#4a7dff]'/>
             </div>
           </div>
@@ -65,7 +64,7 @@ const MyStatsCard = () => {
                 </div>
               </CardContent>
             </div>
-            <div className='flex items-center justify-center h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-[#f2f3f7]'>
+            <div className='flex items-center justify-center h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-[#f2f3f7] dark:bg-[#4a7dff]/10'>
               <BriefcaseBusiness className='h-8 sm:h-10 text-[#4a7dff]'/>
             </div>
           </div>
@@ -82,23 +81,23 @@ const MyStatsCard = () => {
                 </div>
               </CardContent>
             </div>
-            <div className='flex items-center justify-center h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-[#f2f3f7]'>
+            <div className='flex items-center justify-center h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-[#f2f3f7] dark:bg-[#4a7dff]/10'>
               <CornerUpRight className='h-8 sm:h-10 text-[#4a7dff]'/>
             </div>
           </div>
         </div>
       </div>
 
-      <CardFooter className='bg-[#f2f3f7] w-full flex flex-col sm:grid sm:grid-cols-2 p-2 divide-x-0 sm:divide-x-[1px] sm:divide-y-0 divide-y-[1px]'>
+      <CardFooter className='bg-[#f2f3f7] dark:bg-[#4a7dff]/10 w-full flex flex-col sm:grid sm:grid-cols-2 p-2 divide-x-0 sm:divide-x-[1px] sm:divide-y-0 divide-y-[1px] rounded-b-xl'>
         <Button 
           variant="link"
-          className='w-full flex items-center justify-center gap-2 px-0 py-1 text-[#4a7dff]'
+          className='w-full flex items-center justify-center gap-2 px-0 py-1 text-[#4a7dff] rounded-none'
         >
           View My Tasks <MoveRight /> 
         </Button>
         <Button 
           variant="link"
-          className='w-full flex items-center justify-center gap-2 px-0 py-1 text-[#4a7dff]'
+          className='w-full flex items-center justify-center gap-2 px-0 py-1 text-[#4a7dff] rounded-none'
         >
           View My Leaves <MoveRight /> 
         </Button>
