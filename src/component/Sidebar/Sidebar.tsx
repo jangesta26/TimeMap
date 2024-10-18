@@ -1,17 +1,14 @@
 'use client'
 import React from 'react'
-import Link from "next/link"
 import {
 CalendarDays,
 Clock,
-Fingerprint,
 LineChart,
 MegaphoneIcon,
 Settings,
 Users2,
 } from "lucide-react"
 import TooltipLink from './TooltipLink'
-import LogoutButton from '../Button/LogoutButton'
 import ProfileDropdownMenu from '../DropdownMenu/ProfileDropdownMenu'
 import { ModeToggle } from '../Button/ModeButton'
 

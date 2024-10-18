@@ -25,7 +25,7 @@ const MyStuffCard = () => {
               </div>
             </CardContent>
           </div>
-          <div className='flex items-center justify-center h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-[#f2f3f7] dark:bg-[#4a7dff]/10'>
+          <div className='flex items-center justify-center h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-[#4a7dff]/10'>
             <Hourglass className='h-8 sm:h-10 text-[#4a7dff]'/>
           </div>
         </div>
@@ -41,7 +41,7 @@ const MyStuffCard = () => {
               </div>
             </CardContent>
           </div>
-          <div className='flex items-center justify-center h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-[#f2f3f7] dark:bg-[#4a7dff]/10'>
+          <div className='flex items-center justify-center h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-[#4a7dff]/10'>
             <BriefcaseBusiness className='h-8 sm:h-10 text-[#4a7dff]'/>
           </div>
         </div>
@@ -60,7 +60,7 @@ const MyStuffCard = () => {
                 </div>
               </CardContent>
             </div>
-            <div className='flex items-center justify-center h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-[#f2f3f7] dark:bg-[#4a7dff]/10'>
+            <div className='flex items-center justify-center h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-[#4a7dff]/10'>
               <ThermometerSnowflake className='h-8 sm:h-10 text-[#4a7dff]'/>
             </div>
           </div>
@@ -77,7 +77,7 @@ const MyStuffCard = () => {
                 </div>
               </CardContent>
             </div>
-            <div className='flex items-center justify-center h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-[#f2f3f7] dark:bg-[#4a7dff]/10 '>
+            <div className='flex items-center justify-center h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-[#4a7dff]/10 '>
               <HandCoins className='h-8 sm:h-10 text-[#4a7dff] '/>
             </div>
           </div>
@@ -97,7 +97,7 @@ const MyStuffCard = () => {
                 </div>
               </CardContent>
             </div>
-            <div className='flex items-center justify-center h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-[#f2f3f7] dark:bg-[#4a7dff]/10'>
+            <div className='flex items-center justify-center h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-[#4a7dff]/10'>
               <TicketsPlane className='h-8 sm:h-10 text-[#4a7dff]'/>
             </div>
           </div>
@@ -114,7 +114,7 @@ const MyStuffCard = () => {
                 </div>
               </CardContent>
             </div>
-            <div className='flex items-center justify-center h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-[#f2f3f7] dark:bg-[#4a7dff]/10'>
+            <div className='flex items-center justify-center h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-[#4a7dff]/10'>
               <MonitorX className='h-8 sm:h-10 text-[#4a7dff]'/>
             </div>
           </div>

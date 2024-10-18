@@ -8,6 +8,11 @@ const nextConfig = {
                 hostname: 'res.cloudinary.com',
                 pathname: '/**',
             },
+            {
+                protocol: 'https',
+                hostname: 'readymadeui.com',
+                pathname: '/**',
+            },
         ],
     },
     eslint: {

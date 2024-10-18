@@ -28,7 +28,7 @@ const MyStatsCard = () => {
                 </div>
               </CardContent>
             </div>
-            <div className='flex items-center justify-center h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-[#f2f3f7] dark:bg-[#4a7dff]/10'>
+            <div className='flex items-center justify-center h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-[#4a7dff]/10'>
               <CornerRightDown className='h-8 sm:h-10 text-[#4a7dff]'/>
             </div>
           </div>
@@ -44,7 +44,7 @@ const MyStatsCard = () => {
                 </div>
               </CardContent>
             </div>
-            <div className='flex items-center justify-center h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-[#f2f3f7] dark:bg-[#4a7dff]/10'>
+            <div className='flex items-center justify-center h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-[#4a7dff]/10'>
               <Coffee className='h-8 sm:h-10 text-[#4a7dff]'/>
             </div>
           </div>
@@ -64,7 +64,7 @@ const MyStatsCard = () => {
                 </div>
               </CardContent>
             </div>
-            <div className='flex items-center justify-center h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-[#f2f3f7] dark:bg-[#4a7dff]/10'>
+            <div className='flex items-center justify-center h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-[#4a7dff]/10'>
               <BriefcaseBusiness className='h-8 sm:h-10 text-[#4a7dff]'/>
             </div>
           </div>
@@ -81,7 +81,7 @@ const MyStatsCard = () => {
                 </div>
               </CardContent>
             </div>
-            <div className='flex items-center justify-center h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-[#f2f3f7] dark:bg-[#4a7dff]/10'>
+            <div className='flex items-center justify-center h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-[#4a7dff]/10'>
               <CornerUpRight className='h-8 sm:h-10 text-[#4a7dff]'/>
             </div>
           </div>

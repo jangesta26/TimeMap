@@ -14,19 +14,19 @@ const Breadcrums = ({ title, subItem}: { title: string; subItem: Array<{ id: num
   const pathname = usePathname();
 
   return (
-    <Breadcrumb className="md:flex">
-      <BreadcrumbList>
+    <Breadcrumb>
+      <BreadcrumbList className='flex-wrap items-center gap-4 sm:space-x-4'>
         <BreadcrumbItem>
-          <span className='font-semibold text-xl text-black dark:text-[#f2f3f7]'>{title}</span>
+          <span className='font-semibold text-xl -tracking-tighter text-black dark:text-[#f2f3f7]'>{title}</span>
         </BreadcrumbItem>
-        
+        <div className=' flex items-center gap-4'>
         {subItem && subItem.map((item, index) => (
           <React.Fragment key={item.id}>
             <BreadcrumbItem>
               <BreadcrumbLink asChild>
                 <Link 
                   href={item.pathnameUrl}
-                  className={pathname === item.pathnameUrl ? 'font-semibold text-[#4a4dff] underline' : ''}
+                  className={pathname === item.pathnameUrl ? 'font-semibold text-base text-[#4a7dff] border-b-2 border-[#4a7dff]' : 'text-base'}
                 >
                   {item.tabItem}
                 </Link>
@@ -35,6 +35,7 @@ const Breadcrums = ({ title, subItem}: { title: string; subItem: Array<{ id: num
             {index < subItem.length - 1 && <BreadcrumbSeparator />}
           </React.Fragment>
         ))}
+        </div>
       </BreadcrumbList>
     </Breadcrumb>
   );
