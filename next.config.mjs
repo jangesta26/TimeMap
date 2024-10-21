@@ -13,6 +13,11 @@ const nextConfig = {
                 hostname: 'readymadeui.com',
                 pathname: '/**',
             },
+            {
+                protocol: 'https',
+                hostname: 'randomuser.me',
+                pathname: '/**',
+            },
         ],
     },
     eslint: {

@@ -1,10 +1,11 @@
 import React from 'react'
+import ErrorNotFound from '../component/Alert/ErrorNotFound'
 
 const NotFound = () => {
   return (
-    <div>
-      not found
-    </div>
+    <>
+      <ErrorNotFound />
+    </>
   )
 }
 
