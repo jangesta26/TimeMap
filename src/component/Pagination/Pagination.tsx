@@ -23,7 +23,7 @@ const Pagination = ({
   const handleItemsPerPageChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const newItemsPerPage = Number(event.target.value);
     setItemsPerPage(newItemsPerPage);
-    setCurrentPage(1); // Reset to the first page when items per page changes
+    setCurrentPage(1);
   };
 
   return (
@@ -35,8 +35,8 @@ const Pagination = ({
       <div className="flex items-center space-x-2">
         <p className="text-sm text-gray-500">Display:</p>
         <select 
-          value={itemsPerPage} 
-          onChange={handleItemsPerPageChange} // Handle change event
+          // value={itemsPerPage} 
+          // onChange={handleItemsPerPageChange} // Handle change event
           className="text-sm text-gray-500 border border-gray-400 rounded h-7 mx-2 px-1 outline-none"
         >
           <option value={5}>5</option>
@@ -61,7 +61,7 @@ const Pagination = ({
           <li 
             key={index} 
             className={`flex items-center justify-center cursor-pointer text-sm w-7 h-7 rounded ${currentPage === index + 1 ? 'bg-[#007bff] text-white' : 'text-gray-500'}`} 
-            onClick={() => setCurrentPage(index + 1)}
+            onClick={() => setCurrentPage(index+1)}
           >
             {index + 1}
           </li>

@@ -2,12 +2,13 @@ import React from 'react';
 import {
   Bar,
   BarChart,
+  CartesianGrid,
   Label,
   Rectangle,
   ReferenceLine,
   XAxis,
   YAxis,
-  ResponsiveContainer,
+  ResponsiveContainer
 } from 'recharts';
 import {
   Card,
@@ -18,12 +19,14 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from '@/components/ui/chart';
+import useChartDimensions from '@/src/hooks/useChartDimensions';
 
 interface WorkHoursCardProps {
   filter: 'today' | 'week' | 'month' | 'year';
 }
 
 const WorkHoursCard: React.FC<WorkHoursCardProps> = ({ filter }) => {
+  const { width, height } = useChartDimensions();
   const data = {
     today: Array.from({ length: 24 }, (_, i) => ({
       date: `${i}:00`,
@@ -56,90 +59,94 @@ const WorkHoursCard: React.FC<WorkHoursCardProps> = ({ filter }) => {
   };
 
   return (
-    <Card className="w-full shadow-lg bg-card/90">
-      <CardContent>
-        <ChartContainer
-          config={{
-            average: {
-              label: 'Average',
-              color: 'hsl(var(--chart-1))',
-            },
-          }}
-        >
-          <BarChart
-            data={currentData}
-            margin={{ top: 40, right: 0, left: -40, bottom: 10 }}
+    <Card className="w-full shadow-xl bg-card/90 ">
+      <CardContent className='overflow-hidden h-auto p-2 py-3.5'>
+          <ChartContainer
+            config={{
+              average: {
+                label: 'Average',
+                color: 'hsl(var(--chart-1))',
+              },
+            }}
           >
-            <Bar
-              dataKey="average"
-              radius={5}
-              fillOpacity={0.6}
-              shape={(props: any) => (
-                <Rectangle
-                  {...props}
-                  fill={getBarColor(props.payload.average)}
-                />
-              )}
-            />
-            <XAxis
-              dataKey="date"
-              tickLine={false}
-              axisLine={false}
-              tickMargin={4}
-              tickFormatter={(value) => {
-                return filter === 'today' ? value :
-                        filter === 'month' ? new Date(value).getDate() :
-                        filter === 'year' ? value :
-                        new Date(value).toLocaleDateString('en-US', { weekday: 'short' });
-              }}
-            />
-            <YAxis
-              domain={[0, 10]}
-              tickFormatter={(value) => value.toLocaleString()}
-            />
-            <ChartTooltip
-              cursor={false}
-              content={
-                <ChartTooltipContent
-                  hideIndicator
-                  labelFormatter={(value) => {
-                    return new Date(value).toLocaleDateString('en-US', {
-                      day: 'numeric',
-                      month: 'long',
-                      year: 'numeric',
-                    });
-                  }}
-                />
-              }
-            />
-            <ReferenceLine
-              y={8}
-              stroke="#f93939"
-              strokeDasharray="3 3"
-              strokeWidth={1}
+            <BarChart
+            width={width}
+            height={height}
+            accessibilityLayer 
+            data={currentData}
+            margin={{ left: -30, top: 40, bottom: 10, right: 180}}
             >
-              <Label
-                position="insideBottomLeft"
-                value="Target 8"
-                offset={10}
-                fill="#f93939"
+              <CartesianGrid vertical={false} />
+              <Bar
+                dataKey="average"
+                radius={5}
+                fillOpacity={0.6}
+                shape={(props: any) => (
+                  <Rectangle
+                    {...props}
+                    fill={getBarColor(props.payload.average)}
+                  />
+                )}
               />
-            </ReferenceLine>
-            <ReferenceLine
-              y={4}
-              stroke="#4a4dff"
-              strokeDasharray="3 3"
-              strokeWidth={1}
-            >
-              <Label
-                position="insideBottomLeft"
-                value="Target 4"
-                offset={10}
-                fill="#4a4dff"
+              <XAxis
+                dataKey="date"
+                tickLine={false}
+                axisLine={false}
+                tickMargin={10}
+                tickFormatter={(value) => {
+                  return filter === 'today' ? value :
+                         filter === 'month' ? new Date(value).getDate() :
+                         filter === 'year' ? value :
+                         new Date(value).toLocaleDateString('en-US', { weekday: 'short' });
+                }}
               />
-            </ReferenceLine>
-          </BarChart>
-        </ChartContainer>
+              <YAxis
+                domain={[0, 10]}
+                tickFormatter={(value) => value.toLocaleString()}
+              />
+              <ChartTooltip
+                cursor={false}
+                content={
+                  <ChartTooltipContent
+                    hideIndicator
+                    labelFormatter={(value) => {
+                      return new Date(value).toLocaleDateString('en-US', {
+                        day: 'numeric',
+                        month: 'long',
+                        year: 'numeric',
+                      });
+                    }}
+                  />
+                }
+              />
+              <ReferenceLine
+                y={8}
+                stroke="#f93939"
+                strokeDasharray="3 3"
+                strokeWidth={1}
+              >
+                <Label
+                  position="insideBottomLeft"
+                  value="Target 8"
+                  offset={10}
+                  fill="#f93939"
+                />
+              </ReferenceLine>
+              <ReferenceLine
+                y={4}
+                stroke="#4a4dff"
+                strokeDasharray="3 3"
+                strokeWidth={1}
+              >
+                <Label
+                  position="insideBottomLeft"
+                  value="Target 4"
+                  offset={10}
+                  fill="#4a4dff"
+                />
+              </ReferenceLine>
+            </BarChart>
+          </ChartContainer>
       </CardContent>
     </Card>
   );

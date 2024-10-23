@@ -4,9 +4,9 @@ import Breadcrums from '@/src/component/Breadcrum/Breadcrums'
 
 const layout = ({ children }:{ children: React.ReactNode }) => {
   return (
-    <div className='w-full px-8 sm:px-32 mt-10'>
+    <div className='w-full px-6 md:px-32 mt-10'>
       <Breadcrums 
-      title="Team Members"
+      title="Team"
       subItem={[
         {
           id:1,
@@ -15,7 +15,7 @@ const layout = ({ children }:{ children: React.ReactNode }) => {
         },
         {
           id:2,
-          tabItem:"Member",
+          tabItem:"Members",
           pathnameUrl:"/team/members"
         },
       ]}

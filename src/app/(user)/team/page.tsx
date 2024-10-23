@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import { Label } from '@/components/ui/label';
 import TeamStatsCard from '@/src/component/Card/TeamStatsCard';
 import React, { useState } from 'react';
@@ -15,7 +15,6 @@ import useSearch from '@/src/hooks/useSearch';
 import useFiltering from '@/src/hooks/useFiltering';
 import usePagination from '@/src/hooks/usePagination';
 import Pagination from '@/src/component/Pagination/Pagination';
-
 
 const TeamPage: React.FC = () => {
   const { searchTerm, onSearchChange } = useSearch();
@@ -61,15 +60,15 @@ const TeamPage: React.FC = () => {
             placeholder='Search by name or Employee id'
             className='sm:w-96 pl-10 ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-[#4a7dff]'
             suffix={<Search className='translate-x-8 translate-y-2 pr-1 border-r-[1px] -ml-6 text-slate-700' />}
-            value={searchTerm}
-            onChange={onSearchChange}
+            // value={searchTerm}
+            // onChange={onSearchChange}
           />
           <Today />
         </div>
         <div className='mt-2'>
           <div className="overflow-y-auto">
             <DataTable dataTableTeamActivities={paginatedData} />
-            {/* pagination control */}
+            {/* Pagination control */}
             <Pagination 
               currentPage={currentPage} 
               totalPages={totalPages} 
@@ -85,6 +84,6 @@ const TeamPage: React.FC = () => {
       </Card>
     </div>
   );
-}
+};
 
 export default TeamPage;

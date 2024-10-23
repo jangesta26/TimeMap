@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { Sheet, SheetContent, SheetDescription, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
 import {
 CalendarDays,
 Clock,
@@ -27,6 +27,10 @@ const MobileSheet = () => {
             </Button>
         </SheetTrigger>
         <SheetContent side="left" className="sm:max-w-xs">
+        <SheetTitle className="sr-only">
+            <SheetDescription>Mobile Menu</SheetDescription>
+          </SheetTitle>
+
             <nav className="grid gap-6 text-lg font-medium mt-4">
                 <div
                     className="flex h-14 w-full items-center justify-start p-4 rounded-lg bg-[#4a7dff] dark:bg-[#4a7dff]/90 font-semibold text-white md:text-base"
