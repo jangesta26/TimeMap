@@ -4,7 +4,7 @@ import Breadcrums from '@/src/component/Breadcrum/Breadcrums'
 
 const layout = ({ children }:{ children: React.ReactNode }) => {
   return (
-    <div className='w-full px-6 md:px-32 mt-10'>
+    <div className='w-full px-6 lg:px-16 md:px-10 mt-10'>
       <Breadcrums 
       title="Team"
       subItem={[

@@ -25,7 +25,7 @@ const DataTable = ({ dataTableTeamActivities }: { dataTableTeamActivities: any; 
       <thead className="bg-gray-100 dark:bg-[#4a7dff]/10  whitespace-nowrap ">
         <tr>
           {tableHeadItem.map((item) => (
-            <th key={item.id} className="p-3 text-left text-sm font-light text-muted-foreground space-x-2">
+            <th key={item.id} className="p-3 text-left text-xl font-light text-muted-foreground">
               <Label className='flex items-center justify-between' onClick={() => item.key && requestSort(item.key)}>
                 {item.name}
                 {item.key && (
@@ -57,11 +57,31 @@ const DataTable = ({ dataTableTeamActivities }: { dataTableTeamActivities: any; 
                 </div>
               </div>
             </td>
-            <td className="p-4 text-sm"><Label>{inTimeFormatted}</Label></td>
-              <td className="p-4 text-sm"><Label>{outTimeFormatted}</Label></td>
-              <td className="p-4 text-sm"><Label>{workTimeFormatted}</Label></td>
-              <td className="p-4 text-sm"><Label>{breakTimeFormatted}</Label></td>
-              <td className="p-4 text-sm"><Label>{overTimeFormatted}</Label></td>
+            <td className="p-0 text-sm">
+              <div className={`py-6 text-sm ${item.status === 0 && 'bg-[#f93939]/10'}`}>
+              <Label>{item.status === 0 ? '': inTimeFormatted}</Label>
+              </div>
+            </td>
+            <td className="p-0 text-sm">
+              <div className={`py-6 text-sm ${item.status === 0 && 'bg-[#f93939]/10'}`}>
+              <Label>{item.status === 0 ? '': outTimeFormatted}</Label>
+              </div>
+            </td>
+            <td className="p-0 text-sm">
+              <div className={`py-6 text-sm ${item.status === 0 && 'bg-[#f93939]/10'}`}>
+              <Label>{item.status === 0 ? '': workTimeFormatted}</Label>
+              </div>
+            </td>
+            <td className="p-0 text-sm">
+              <div className={`py-6 text-sm ${item.status === 0 && 'bg-[#f93939]/10'}`}>
+              <Label>{item.status === 0 ? '': breakTimeFormatted}</Label>
+              </div>
+            </td>
+            <td className="p-0 text-sm text-center">
+              <div className={`text-sm ${item.status === 0 && 'bg-[#f93939]/10 py-3.5 text-[#f93939]/90'}`}>
+              <Label className='text-sm '>{item.status === 0 ? <>Absent (No Intimation)</>: overTimeFormatted}</Label>
+              </div>
+            </td>
             <td className="p-4 text-sm">
               <ActionButton />
             </td>

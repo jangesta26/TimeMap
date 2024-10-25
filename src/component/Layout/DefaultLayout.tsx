@@ -9,10 +9,10 @@ const DefaultLayout = ({children}:{children: React.ReactNode}) => {
         <aside className="fixed inset-y-0 left-0 z-10 hidden w-16 flex-col border-r bg-background sm:flex shadow-lg">
          <Sidebar />
         </aside>
-        <div className="sm:pl-16 shadow">
-         <Navbar />
+        <div className="flex-1 sm:pl-16">
+        <Navbar />
+          <main>{children}</main>
         </div>
-        {children}
         <div className="sm:pl-16 mt-10">
           <Footer />
         </div>

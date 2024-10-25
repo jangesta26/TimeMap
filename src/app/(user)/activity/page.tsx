@@ -2,9 +2,7 @@ import React from 'react'
 
 const ActivityPage = () => {
   return (
-    <div>
-      Activity
-    </div>
+    <div>My Post:</div>
   )
 }
 

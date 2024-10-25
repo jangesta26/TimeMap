@@ -18,7 +18,7 @@ const TooltipLink = ({
 
   return (
     <TooltipProvider>
-      <Tooltip>
+      <Tooltip delayDuration={100}>
         <TooltipTrigger asChild>
           <Link
             href={href}

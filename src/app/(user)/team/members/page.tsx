@@ -17,6 +17,7 @@ const MembersPage = () => {
       {teamActivityData.slice(0, visibleMembers).map((item) => (
         <Card key={item.id} className="rounded-3xl shadow-lg p-6 bg-card/90">
           <TeamMembersCard
+            userId={item.id}
             name={item.name}
             imgUrl={item.avatar}
             job={item.jobTitle}

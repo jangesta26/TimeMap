@@ -15,7 +15,7 @@ const DashboardPage = () => {
   const [selectedFilter, setSelectedFilter] = useState<'today' | 'week' | 'month' | 'year'>('today');
   const currentDate = new Date().toLocaleDateString();
   return (
-    <section className='flex flex-col px-4 sm:px-32 w-full'>
+    <section className='flex flex-col px-6 lg:px-16 md:px-10 w-full'>
       <div className='mt-10'>
         <Breadcrums 
         title="My Dashboard"
@@ -29,7 +29,7 @@ const DashboardPage = () => {
         />
         <Separator  className='mt-4 mb-4'/>
       </div>
-      <main className="xl:grid xl:grid-cols-2 items-center space-y-8 xl:space-y-0 sm:gap-10">
+      <div className="xl:grid xl:grid-cols-2 items-center space-y-8 xl:space-y-0 sm:gap-10">
         <div className='w-full items-start space-y-2 mx-auto'>
           <Label className='font-semibold ml-1 py-1.5'>Today is {currentDate}</Label>
           <TodayIsCard />
@@ -57,7 +57,7 @@ const DashboardPage = () => {
           </div>
           <MyStuffCard />
         </div>
-      </main>
+      </div>
     </section>
   )
 }

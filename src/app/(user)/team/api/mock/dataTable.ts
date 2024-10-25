@@ -1,3 +1,5 @@
+import { TeamActivityData } from "@/src/types/data";
+
 export const teamActivityData = [
     {
         "name": "Sylvia_Waters6",

@@ -1,0 +1,15 @@
+export interface TeamActivityData {
+    id:string,
+    name:string,
+    email:string,
+    avatar:string,
+    jobTitle: string,
+    status: number,
+    teamMemberLeaveTitle: string,
+    inTime: string,
+    outTime: string,
+    workTime: string,
+    breakTime: string,
+    overTime: string,
+    leaveTitle:string,
+  }

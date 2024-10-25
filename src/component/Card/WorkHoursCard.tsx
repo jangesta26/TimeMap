@@ -60,7 +60,7 @@ const WorkHoursCard: React.FC<WorkHoursCardProps> = ({ filter }) => {
 
   return (
     <Card className="w-full shadow-xl bg-card/90 ">
-      <CardContent className='overflow-hidden h-auto p-2 py-3.5'>
+      <CardContent className='overflow-hidden h-auto p-2 py-1'>
           <ChartContainer
             config={{
               average: {

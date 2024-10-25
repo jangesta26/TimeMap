@@ -16,6 +16,7 @@ const Footer = () => {
         Janell Gesta
       </a>
     </div>
+    <div className='-mt-4 m-2 text-center text-sm text-muted-foreground dark:text-white'>© TimeMap. All rights reserved</div>
     </>
   )
 }

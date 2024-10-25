@@ -7,8 +7,12 @@ import {
 } from "@/components/ui/avatar";
 import { Badge } from '@/components/ui/badge';
 import TimeInOutCard from './TimeInOutCard';
+import Link from 'next/link';
+
+type TeamMemberStatus = 0 | 1;
 
 const TeamMembersCard = ({
+  userId,
   name,
   imgUrl,
   job,
@@ -19,6 +23,7 @@ const TeamMembersCard = ({
   workTime,
   breakTime
 }:{
+  userId:string;
   name: string;
   imgUrl: string;
   job: string;
@@ -35,10 +40,12 @@ const TeamMembersCard = ({
         <div className='flex items-start justify-between gap-4'>
           <Avatar className='w-14 h-14'>
             <AvatarImage src={imgUrl} alt={name} />
-            <AvatarFallback>{}</AvatarFallback>
+            <AvatarFallback>pic</AvatarFallback>
           </Avatar>
           <div className='flex flex-col'>
-            <Label className='text-xl font-semibold'>{name}</Label>
+            <Link href={`/team/${userId}`} className='hover:underline hover:cursor-pointer text-xl font-semibold'>
+              {name}
+            </Link>
             <Label className='text-sm font-light text-muted-foreground'>{job}</Label>
             <div className='block sm:hidden'>
               <Badge variant='outline' className={`${teamMemberStatus === 1 ? 'text-[#51ce2c] bg-[#51ce2c]/10':'text-[#f93939] bg-[#f93939]/10'} w-14 h-6 text-[12px] px-2 py-2 font-light border-0`}>
