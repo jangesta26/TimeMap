@@ -1,11 +1,8 @@
+import SigninForm from '@/src/component/Form/SigninForm'
 import React from 'react'
 
 const page = () => {
-  return (
-    <div>
-      This is login page!!
-    </div>
-  )
+  return <SigninForm/>
 }
 
 export default page
