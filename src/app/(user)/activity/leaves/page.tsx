@@ -2,7 +2,7 @@ import { Card } from '@/components/ui/card'
 import React from 'react'
 import CardLeavesStats from './component/CardLeavesStats'
 import NotificationAlert from './component/NotificationAlert'
-import { CircleAlert } from 'lucide-react'
+import { CircleAlert, PlusCircle } from 'lucide-react'
 import LeavesDataTable from './component/LeavesDataTable'
 import { leavesData } from './component/leavesDataApi'
 import { Label } from '@/components/ui/label'
@@ -48,7 +48,10 @@ const LeavesPage = () => {
       <Card className="w-full rounded-2xl shadow-xl bg-card/90 p-6 px-8 space-y-6">
         <div className='flex items-center justify-between'>
           <Label className='text-xl py-1.5 font-bold'>Leaves</Label>
-          <Button variant="outline" className='w-48 h-12 flex items-center hover:bg-[#4a7dff]/20 hover:text-[#4a7dff] font-semibold text-md bg-[#4a7dff] text-white'>New Task</Button>
+          <Button variant="outline" className='w-auto h-12 flex items-center hover:bg-[#4a7dff]/20 hover:text-[#4a7dff] font-semibold text-md bg-[#4a7dff] text-white gap-1.5 border-0'>
+            <Label className='text-md hidden sm:block'>New Task</Label>
+            <PlusCircle />
+          </Button>
         </div>
         <div className='flex items-center justify-between'>
           <div className='w-[280px]'>
@@ -106,7 +109,7 @@ const LeavesPage = () => {
           LeavesItemDataReports={leavesData[0]?.leavesApply || []}
           />
         </div>
-        <div className='w-full flex flex-col items-center justify-center gap-4 xl:flex-row xl:items-center xl:justify-between px-2 mt-6'>
+        <div className='w-full flex flex-col items-center justify-center gap-4 sm:flex-row sm:items-center sm:justify-between px-2 mt-6'>
           {/* select */}
           <div className="flex items-center gap-2 text-slate-500">
             <LeavesSelectDisplay />

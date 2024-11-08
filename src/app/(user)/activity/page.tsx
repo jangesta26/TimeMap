@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button'
 import { Separator } from '@/components/ui/separator'
 import { Badge } from '@/components/ui/badge'
 import CardActivity from './component/CardActivity'
+import { PlusCircle } from 'lucide-react'
 
 const ActivityPage = () => {
   return (
@@ -23,7 +24,10 @@ const ActivityPage = () => {
       <div className='w-full grow '>
         <div className='flex items-center justify-between'>
           <Label className='text-2xl font-[600] '>Time Sheet</Label>
-          <Button variant="outline" className='w-48 h-12 flex items-center hover:bg-[#4a7dff]/20 hover:text-[#4a7dff] font-semibold text-md bg-[#4a7dff] text-white'>New Task</Button>
+          <Button variant="outline" className='w-auto h-12 flex items-center hover:bg-[#4a7dff]/20 hover:text-[#4a7dff] font-semibold text-md bg-[#4a7dff] text-white gap-1.5 border-0'>
+            <Label className='text-md hidden sm:block'>New Task</Label>
+            <PlusCircle />
+          </Button>
         </div>
         <div className='space-y-6'>
         <CardActivity
