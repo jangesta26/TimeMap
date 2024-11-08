@@ -101,10 +101,12 @@ const LeavesPage = () => {
             />
           </div>
         </div>
-        <LeavesDataTable
-        LeavesItemDataReports={leavesData[0]?.leavesApply || []}
-        />
-        <div className='w-full flex items-center justify-between px-2 mt-6'>
+        <div className="overflow-y-auto p-2">
+          <LeavesDataTable
+          LeavesItemDataReports={leavesData[0]?.leavesApply || []}
+          />
+        </div>
+        <div className='w-full flex flex-col items-center justify-center gap-4 xl:flex-row xl:items-center xl:justify-between px-2 mt-6'>
           {/* select */}
           <div className="flex items-center gap-2 text-slate-500">
             <LeavesSelectDisplay />
