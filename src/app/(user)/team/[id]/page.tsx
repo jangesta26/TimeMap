@@ -6,6 +6,7 @@ import { Card } from '@/components/ui/card';
 import { CalendarDays, ListCollapse, Logs, TicketsPlane } from 'lucide-react';
 import TabItem from './component/TabItem';
 import AttendanceTabItem from './content/Attendance';
+import WorkLog from './content/WorkLog/Index';
 
 const ViewTeamMemberPage = ({ params }: { params: Promise<{ id: string }> }) => {
   const unwrappedParams = React.use(params);
@@ -22,18 +23,18 @@ const ViewTeamMemberPage = ({ params }: { params: Promise<{ id: string }> }) => 
     <div className='w-full flex flex-col mt-10 items-center md:items-start'>
       <div className='flex flex-col items-center md:flex-row md:items-center gap-4 w-full'>
         <Avatar className='w-32 h-32 md:w-20 md:h-20'>
-          <AvatarImage src="" alt={`Profile picture of ${memberId}`} />
+          <AvatarImage src="https://randomuser.me/api/portraits/women/1.jpg" alt={`Profile picture of ${memberId}`} />
           <AvatarFallback>CN</AvatarFallback>
         </Avatar>
         
         <div className='flex flex-col'>
-          <Label className='text-2xl font-semibold'>Name</Label>
+          <Label className='text-2xl font-semibold'>Sherly Doe</Label>
           <p className='text-muted-foreground text-sm'>ID: {memberId}</p>
         </div>
       </div>
       
       <div className='w-full mt-10'>
-        <Card className='shadow-xl'>
+        <Card className='shadow-xl bg-card/90'>
           <div className="p-2 -mb-2">
             <ul className="flex overflow-x-auto">
               <TabItem 
@@ -68,7 +69,7 @@ const ViewTeamMemberPage = ({ params }: { params: Promise<{ id: string }> }) => 
             <AttendanceTabItem /> //Attendance Reports
           )}
           {activeTab === 'Logs' && (
-            <div className='mt-10'>Coming soon...</div>
+            <WorkLog />
           )}
           {activeTab === 'Leave' && (
             <div className='mt-10'>Coming soon...</div>

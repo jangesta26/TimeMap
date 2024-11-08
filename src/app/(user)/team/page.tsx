@@ -37,7 +37,10 @@ const TeamPage: React.FC = () => {
         </div>
       </div>
       <div className='mt-10'>
-        <SendReminder />
+        <SendReminder 
+        notifyDescription="Wade Warren was absent on 12 Apr 2024 without any intimation"
+        btnLabel="Send Reminder"
+        />
       </div>
       <div className='w-full mt-10 flex flex-col gap-6 xl:grid xl:grid-cols-2 xl:gap-12'>
         {leaveRequests.map(request => (

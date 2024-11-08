@@ -21,12 +21,12 @@ const MobileSheet = () => {
   return (
     <Sheet open={isOpen} onOpenChange={setIsOpen}>
         <SheetTrigger asChild>
-            <Button size="icon" variant="outline" className="sm:hidden" onClick={() => setIsOpen(true)}>
+            <Button size="icon" variant="outline" className="sm:hidden focus-visible:ring-[#4a7dff]" onClick={() => setIsOpen(true)}>
                 <MenuIcon className="h-5 w-5" />
                 <span className="sr-only">Toggle Menu</span>
             </Button>
         </SheetTrigger>
-        <SheetContent side="left" className="sm:max-w-xs">
+        <SheetContent side="left" className="sm:max-w-xs focus-visible:ring-[#4a7dff]">
         <SheetTitle className="sr-only">
             <SheetDescription>Mobile Menu</SheetDescription>
           </SheetTitle>
