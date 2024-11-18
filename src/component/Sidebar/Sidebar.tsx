@@ -3,8 +3,10 @@ import React from 'react'
 import {
 CalendarDays,
 Clock,
+LifeBuoy,
 LineChart,
 MegaphoneIcon,
+Send,
 Settings,
 Users2,
 } from "lucide-react"
@@ -27,6 +29,8 @@ const Sidebar = () => {
             <TooltipLink href="/settings" icon={Settings} label="Settings" />
         </nav>
         <nav className="mt-auto flex flex-col items-center gap-4 px-2 sm:py-5">
+            <TooltipLink href="/support" icon={LifeBuoy} label="Support" />
+            <TooltipLink href="/feedback" icon={Send} label="Feedback" />
             <ModeToggle />
         </nav>
     </>
