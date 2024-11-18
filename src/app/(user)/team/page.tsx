@@ -26,7 +26,7 @@ const TeamPage: React.FC = () => {
     <div className='w-full mt-10'>
       <div className='flex-col gap-6'>
         <div className='flex items-center justify-between'>
-          <Label className='text-lg py-1.5'>Team Stats</Label>
+          <Label className='text-xl py-1.5'>Team Stats</Label>
           <Today />
         </div>
         <div className='flex flex-col gap-4 lg:grid lg:grid-cols-2 xl:grid-cols-4 sm:gap-10'>

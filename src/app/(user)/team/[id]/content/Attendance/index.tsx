@@ -10,9 +10,13 @@ const AttendanceTabItem = () => {
     <div className='w-full flex flex-col gap-8 mt-10'>
         <div className='w-full xl:h-[400px] flex flex-col space-y-8 xl:space-y-0 xl:flex-row xl:gap-8'>
         {/* Today is */}
-        <AttendanceTodayIs />
+        <div>
+          <AttendanceTodayIs />
+        </div>
         {/* Work Hours */}
-        <AttendanceWorkHours />
+        <div>
+          <AttendanceWorkHours />
+        </div>
         </div>
         
         <div className='mx-auto w-full'>

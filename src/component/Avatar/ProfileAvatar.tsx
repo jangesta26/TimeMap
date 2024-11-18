@@ -18,6 +18,12 @@ const ProfileAvatar = ({ name, imgUrl }: { name: string; imgUrl: string }) => {
         <Avatar>
             <AvatarImage 
             src={imgUrl}
+            width={300}
+            height={300}
+            fetchPriority="high"
+            decoding="async"
+            sizes="(max-width: 640px) 100vw, (max-width: 768px) 150px, 200px"
+            className="rounded-full dark:filter transition ease"
             alt="@profile"
             />
             <AvatarFallback>{initials}</AvatarFallback>

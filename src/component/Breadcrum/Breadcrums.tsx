@@ -17,7 +17,7 @@ const Breadcrums = ({ title, subItem}: { title: string; subItem: Array<{ id: num
     <Breadcrumb>
       <BreadcrumbList className='flex flex-col md:flex-row items-center gap-4 sm:space-x-4'>
         <BreadcrumbItem>
-          <span className='font-semibold text-xl -tracking-tighter text-black dark:text-[#f2f3f7]'>{title}</span>
+          <span className='font-semibold text-3xl -tracking-tighter text-black dark:text-[#f2f3f7]'>{title}</span>
         </BreadcrumbItem>
         <div className=' flex items-center md:gap-4'>
         {subItem && subItem.map((item, index) => (

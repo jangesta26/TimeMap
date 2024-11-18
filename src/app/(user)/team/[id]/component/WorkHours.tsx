@@ -62,7 +62,7 @@ const WorkHours = ({ startDate, endDate }: { startDate: Date | undefined; endDat
   const { width, height } = useChartDimensions();
 
   return (
-    <Card className="shadow-xl xl:h-[355px]">
+    <Card className="shadow-xl xl:h-[355px] rounded-2xl">
       <div className="md:block hidden">
         <ChartContainer config={{}} className='w-full flex items-center'>
             <BarChart 

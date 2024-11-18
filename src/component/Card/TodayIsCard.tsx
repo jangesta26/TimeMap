@@ -38,7 +38,7 @@ const TodayIsCard = () => {
           variant="link"
           className='w-full h-auto text-[#4a7dff] hover:font-semibold'
         >
-          See All ...
+          View Events...
         </Button>
       </CardFooter>
     </Card>
