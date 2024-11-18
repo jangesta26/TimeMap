@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 const Footer = () => {
@@ -16,7 +17,13 @@ const Footer = () => {
         Janell Gesta
       </a>
     </div>
-    <div className='-mt-4 m-2 text-center text-sm text-muted-foreground dark:text-white'>© TimeMap. All rights reserved</div>
+    <div className='-mt-4 m-2 text-center text-sm text-muted-foreground mb-4'>
+      <p> © TimeMap. All rights reserved</p>
+      <div className='flex items-center justify-center gap-2'>
+      <Link href="/support" className='text-muted-foreground font-light hover:underline hover:text-primary'>Support</Link>
+      <Link href="/feedback" className='text-muted-foreground font-light hover:underline hover:text-primary'>Feedback</Link>
+      </div>
+    </div>
     </>
   )
 }

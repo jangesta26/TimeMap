@@ -4,9 +4,11 @@ import { Sheet, SheetContent, SheetDescription, SheetTitle, SheetTrigger } from 
 import {
 CalendarDays,
 Clock,
+LifeBuoy,
 LineChart,
 Megaphone,
 MenuIcon,
+Send,
 Settings,
 Users2,
 } from "lucide-react"
@@ -57,6 +59,12 @@ const MobileSheet = () => {
             <LinkItem href="/announcement" icon={Megaphone} label="Announcement" />
             <LinkItem href="/calendar" icon={CalendarDays} label="Calendar" />
             <LinkItem href="/settings" icon={Settings} label="Settings" />
+            <Separator className='mt-4'/>
+            <div className='mt-2 flex flex-col space-y-2'>
+                <LinkItem href="/support" icon={LifeBuoy} label="Support" />
+                <LinkItem href="/feedback" icon={Send} label="Feedback" />
+                <Button className='rounded-full hover:bg-[#4a7dff]/80'>Logout</Button>
+            </div>
             </nav>
         </SheetContent>
     </Sheet>
