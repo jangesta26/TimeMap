@@ -2,7 +2,7 @@ import React from 'react';
 
 const CalendarHeader = () => (
   <thead>
-    <tr className="grid grid-cols-7 rounded-t-sm bg-primary text-white">
+    <tr className="grid grid-cols-7 bg-primary text-white">
       {['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map((day, index) => (
         <th
           key={index}

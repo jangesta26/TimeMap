@@ -20,7 +20,7 @@ const AttendanceWorkHours = () => {
         />
         </div>
         <div className='w-full'>
-        <WorkHours startDate={startDate} endDate={endDate} />
+          <WorkHours startDate={startDate} endDate={endDate} />
         </div>
     </div>
   )

@@ -38,7 +38,7 @@ const Calendar = () => {
       </div>
 
       {/* Calendar Table */}
-      <div className="w-full max-w-full rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
+      <div className="w-full max-w-full border-0 bg-white shadow-default dark:bg-boxdark">
         <table className="w-full">
           <CalendarHeader />
           <tbody>
@@ -62,7 +62,7 @@ const Calendar = () => {
                 return (
                   <td
                     key={index}
-                    className={`relative h-32 cursor-pointer border p-2 text-right transition duration-500 hover:bg-gray ${isPrevMonth || isNextMonth ? "opacity-50 text-gray-400" : ""}`}
+                    className={`relative h-32 cursor-pointer border dark:bg-slate-950 p-2 text-right transition duration-500 hover:bg-gray ${isPrevMonth || isNextMonth ? "opacity-50 dark:opacity-90 text-gray-400" : ""}`}
                   >
                     {item.day ? (
                       <>
@@ -77,7 +77,7 @@ const Calendar = () => {
 
                         {/* Show the day number */}
                         {!isCurrentDay && (
-                          <span className={`font-medium text-black ${isPrevMonth || isNextMonth ? "text-gray-400" : ""}`}>
+                          <span className={`font-medium text-black dark:text-white ${isPrevMonth || isNextMonth ? "text-gray-400 dark:opacity-50" : ""}`}>
                             {item.day}
                           </span>
                         )}
@@ -121,8 +121,8 @@ const Calendar = () => {
 
                             {/* Popover */}
                             {popoverEventDay === item.day && (
-                              <div className="relative z-50 ">
-                                <div className="w-full  flex flex-col items-center justify-center max-w-sm sm:max-w-md lg:max-w-lg xl:max-w-xl rounded p-4 bg-white shadow-[0_-4px_24px_-8px_rgba(0,0,0,0.2)] absolute top-2 right-0 sm:left-0 sm:right-auto before:w-4 before:h-4 before:rotate-45 before:bg-white before:absolute before:-top-1.5 before:left-0 before:right-0 before:mx-auto">
+                              <div className="relative z-50">
+                                <div className="w-full flex flex-col items-center justify-center max-w-sm sm:max-w-md lg:max-w-lg xl:max-w-xl rounded p-4 bg-white dark:bg-slate-900 shadow-[0_-4px_24px_-8px_rgba(0,0,0,0.2)] absolute top-2 right-0 sm:left-0 sm:right-auto before:w-4 before:h-4 before:rotate-45 before:bg-white dark:before:bg-slate-900  before:absolute before:-top-1.5 before:left-0 before:right-0 before:mx-auto">
                                   <Label className="w-full flex border-b pb-1.5">Events</Label>
                                   <CalendarPopover eventsForDay={eventsForDay} />
                                 </div>
