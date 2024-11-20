@@ -2,6 +2,7 @@ import SvgImages from '@/src/svg/SvgImages'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import { ModeToggle } from '../Button/ModeButton'
 
 const AuthLayout = ({children}:{children: React.ReactNode}) => {
   return (

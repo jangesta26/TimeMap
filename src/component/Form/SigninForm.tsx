@@ -1,6 +1,16 @@
-import React from 'react'
+'use client'
+import { useRouter } from 'next/navigation'
+import React, { useState } from 'react'
+import LoadingDot from '../Common/LoadingDot';
+import Link from 'next/link';
 
 const SigninForm = () => {
+    const [loading, setLoading] = useState(false);
+    const router = useRouter();
+    const handleSignin = () => {
+        setLoading(true);
+        router.push('/')
+    }
   return (
     <form className="mt-12 ">
         <h3 className="text-xl font-bold text-primary mb-8 text-center">Sign In</h3>
@@ -34,15 +44,26 @@ const SigninForm = () => {
                     </label>
                 </div>
                 <div className="text-sm">
-                    <a href="#" className="text-blue-600 hover:underline font-semibold">
+                    <Link href="/forgot-password" className="text-blue-600 hover:underline font-semibold">
                         Forgot your password?
-                    </a>
+                    </Link>
                 </div>
             </div>
         </div>
         <div className="mt-8">
-            <button type="button" className="w-full py-4 px-8 text-sm tracking-wide font-semibold text-white bg-primary hover:bg-[#4a7dff]/90 focus:outline-none rounded-md">
-            Sign In
+            <button 
+            type="button" 
+            className="flex items-center justify-center w-full py-4 px-8 text-sm tracking-wide font-semibold text-white bg-primary hover:bg-[#4a7dff]/90 focus:outline-none rounded-md"
+            onClick={handleSignin}
+            disabled={loading}
+            >
+            { loading ? (
+              <LoadingDot/>
+            ) : (
+              <>
+                Sign In
+              </>
+            )}
             </button>
         </div>
         <p className="text-sm mt-8 text-center text-gray-800">Don't have an account? <a href="/signup" className="text-primary font-semibold hover:underline ml-1">Register here</a></p>

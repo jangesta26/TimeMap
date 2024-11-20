@@ -3,7 +3,7 @@ import React from 'react'
 
 const Feature = () => {
   return (
-    <Card className="mt-10 max-w-full mx-auto bg-card/90 rounded-3xl hadow-2xl p-4 py-10 dark:bg-">
+    <Card className="mt-10 max-w-full mx-auto bg-card/90 rounded-3xl hadow-2xl p-4 py-10">
     <h2 className="text-muted-foreground sm:text-4xl text-2xl font-extrabold text-center mb-16">Discover Our Exclusive Features</h2>
     <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-12">
         <div className="text-center">

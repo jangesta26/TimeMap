@@ -1,4 +1,5 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
 import { CalendarDays, CircleHelp, Fingerprint, LogOut, RectangleEllipsis, ShieldAlert, ShieldCheck, UserRound } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import {
@@ -11,8 +12,20 @@ import {
 } from "@/components/ui/dropdown-menu"
 import ProfileAvatar from '../Avatar/ProfileAvatar'
 import { Label } from '@radix-ui/react-dropdown-menu'
+import { useRouter } from 'next/navigation'
+import { useTheme } from 'next-themes'
+import LoadingDot from '../Common/LoadingDot'
 
 const ProfileDropdownMenu = () => {
+    const router = useRouter();
+    const [loading, setLoading] = useState(false);
+    const { setTheme } = useTheme();
+
+    const handleLogout = () => {
+        setLoading(true);
+        router.push('/signin');
+        setTheme('light');
+    }
   return (
     <DropdownMenu>
         <DropdownMenuTrigger asChild>
@@ -66,9 +79,17 @@ const ProfileDropdownMenu = () => {
             <DropdownMenuSeparator />
             <DropdownMenuItem 
             className='flex items-center gap-2'
+            onClick={handleLogout}
             > 
-            <LogOut className='h-4'/> 
-            Logout
+             { loading ? (
+              <LoadingDot/>
+            ) : (
+              <>
+                <LogOut className='h-4'/> 
+                Logout
+              </>
+            )}
+            
             </DropdownMenuItem>
         </DropdownMenuContent>
     </DropdownMenu>
